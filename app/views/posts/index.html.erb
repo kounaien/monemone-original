@@ -1,0 +1,10 @@
+<div class="row">
+    <div class="col-xs-offset-4 col-xs-8">
+        <div id="post_list">
+            <%= render 'post_list', posts: @posts %>       
+        </div>
+        <div class="more">
+            <%= link_to_next_page @posts, 'もっと見る', remote: true, id: 'view_more' %>
+        </div>
+    </div>
+</div>
