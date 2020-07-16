@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-    before_action :autenticate_user!, except: :top
+    before_action :authenticate_user!, except: :top
 
     def top
     end
@@ -10,6 +10,7 @@ class PostsController < ApplicationController
     
     def create
         @post = Post.new(post_params)
+        @post.user_id = current_user.id
         if @post.save
             flash[:succes] = "投稿完了"
             redirect_to @post
@@ -21,6 +22,10 @@ class PostsController < ApplicationController
     
     def index
        @posts = Post.page(params[:page]).per(10).order(created_at: :desc)
+    end
+    
+    def show
+
     end
     
     def edit
@@ -37,7 +42,7 @@ class PostsController < ApplicationController
     
     private
     def post_params
-        params.require(:post).permit(:title, :caption, :fee)
+        params.require(:post).permit(:title, :caption, :fee, :image)
     end
 
 end

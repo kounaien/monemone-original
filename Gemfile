@@ -69,6 +69,11 @@ gem 'devise'
 gem 'kaminari'
 gem 'bootstrap', '~> 4.5.0'
 gem 'jquery-rails'
+gem 'font-awesome-rails'
+gem 'aws-sdk'
+gem 'mini_magick'
+gem 'refile', require: ['refile/rails', 'refile/image_processing']
+
 
 gem 'dotenv-rails'
 group :production do

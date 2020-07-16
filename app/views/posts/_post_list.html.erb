@@ -1,5 +1,20 @@
 <% posts.each do |post| %>
-    <%= post.title %>
-    <%= post.caption %>
-    <%= post.fee %>
+    <div class="block">
+        <div class="block-header">
+                <span>
+                    <%= attachment_image_tag post.user, :profile_image, size: '70x70', fallback: "no_image.jpg", class: "rounded-image" %>
+                    <%= post.user.name %>
+                </span>
+            </div>
+        <div class="block-image">
+            <%# <%= attachment_image_tag post, :image, size: '100x100', fallback: "no_image.jpg" %> %>
+        </div>
+        <div class="block-content">
+            <h3><%= post.title %></h3>
+            <div class="caption">
+                <p><%= post.caption %></p>
+                <p><%= post.fee %></p>
+            </div>
+        </div>
+    </div>
 <% end %>
