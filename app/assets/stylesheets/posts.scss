@@ -1,3 +1,13 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#post_list{
+    background-color: white;
+}
+
+.rounded-image{
+    border: solid 2px lightgray;
+    border-radius: 50%;
+    margin-right: 5px;
+}

@@ -11,4 +11,63 @@
  * It is generally better to create a new file per style scope.
  *
  */
-@import "bootstrap";
+ @import "bootstrap";
+ @import "font-awesome";
+ 
+ *{
+    margin: 0;
+    padding: 0;
+ }
+
+ body{
+     background-color: #f8f8f8;
+ }
+
+ #monemone{
+     font-size: 25px;
+     vertical-align: center;
+ }
+
+header{
+    background-color: white;
+    border-bottom: solid 1px lightgray;
+    a {
+        color: #03695f;
+    }
+    li{
+        padding-right: 10px;
+        font-size: 16px;
+    }
+}
+
+.content{
+    margin-top: 100px;
+}
+
+.form-user-style, .form-post-style{
+    background-color: white;
+    padding: 70px;
+    border: solid 2px gray;
+    border-radius: 15px;
+    .text-color{
+        color: #03695f;
+    }
+    .origin-btn{
+        margin: 5px 0;
+        padding: 0.5em 1em;
+        text-decolation: none;
+        color: #03695f;
+        border: solid 2px #03695f;
+        border-radius: 3px;
+        background-color: transparent;
+        font-weight: 300px;
+        text-align: center;
+        vertical-align: center;
+    }
+}
+
+.form-header{
+    text-align: center;
+    color: #03695f;
+}
+
