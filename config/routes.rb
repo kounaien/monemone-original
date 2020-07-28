@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   resources :users, only: [:show, :edit, :update]
 
   #投稿
-  resources :posts
+  resources :posts do
+    resource :favorites, only: [:create, :destroy]
+    resources :post_comments, only: [:create, :destroy]
+  end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
