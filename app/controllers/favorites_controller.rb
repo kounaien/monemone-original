@@ -4,6 +4,7 @@ class FavoritesController < ApplicationController
         post = Post.find(params[:post_id])
         favorite = current_user.favorites.new(post_id: post.id)
         favorite.save
+        # 直前に戻るようにするandajuxs通信
         redirect_to post_path(post)
     end
 

@@ -3,14 +3,19 @@
     <div class="col-8 offset-2 block">
         <div class="block-header">
                 <span>
-                    <%= link_to user_path(@post) do %>
+                    <%= link_to user_path(@post.user_id) do %>
                         <%= attachment_image_tag @post.user, :profile_image, size: '50x50', fallback: "no_image.jpg", class: "rounded-image" %>
                         <%= @post.user.name %>
                     <% end %>
                 </span>
+                <% if @post.user_id == current_user.id %>
+                    <span class="pull-right">
+                        <%= link_to "削除", post_path(@post), method: :delete, class: "btn btn-outline-danger" %>
+                    </span>
+                <% end %>
         </div>
         <div class="block-image">
-            <%# <%= attachment_image_tag post, :image, size: '100x100', fallback: "no_image.jpg" %> %>
+            <%= attachment_image_tag @post, :image, size: "80x80", fallback: "no_image.jpg" %>
         </div>
         <div class="favorite">
             <%= render "favorite", post: @post %>

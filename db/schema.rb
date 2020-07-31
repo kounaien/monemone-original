@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 2020_07_28_140716) do
 
   create_table "posts", force: :cascade do |t|
     t.integer "user_id", null: false
-    t.string "image_id", null: false
+    t.string "image_id"
     t.integer "fee", null: false
     t.text "caption", null: false
     t.string "title", null: false
