@@ -9,7 +9,7 @@
                 </span>
             </div>
         <div class="block-image">
-            <%# <%= attachment_image_tag post, :image, size: '100x100', fallback: "no_image.jpg" %> %>
+            <%= attachment_image_tag post, :image, size: '100x100', fallback: "no_image.jpg" %>
         </div>
         <div class="block-content">
             <h3><%= link_to "post.title", post_path(post.id) %></h3>
