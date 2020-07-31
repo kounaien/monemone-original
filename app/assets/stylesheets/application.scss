@@ -36,6 +36,7 @@
  }
 
  body{
+     padding: 10px;
     a{
         color: black;
     }
@@ -76,9 +77,13 @@ header{
     border: solid 2px #03695f;
     border-radius: 3px;
     background-color: transparent;
-    font-weight: 300px;
     text-align: center;
     vertical-align: center;
+    font-size: 14px;
+}
+.origin-btn:hover{
+    color: white;
+    background-color: #03695f;
 }
 
 .form-header{
